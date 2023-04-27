@@ -1,7 +1,7 @@
 {
-  "name": "cryptoapps",
+  "name": "gwcscrypto",
   "version": "0.1.0",
-  "homepage": ".",
+  "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@reduxjs/toolkit": "^1.9.5",
