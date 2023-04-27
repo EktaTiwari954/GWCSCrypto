@@ -1,6 +1,7 @@
 {
   "name": "cryptoapps",
   "version": "0.1.0",
+  "homepage": ".",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@reduxjs/toolkit": "^1.9.5",
