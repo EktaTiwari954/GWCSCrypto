@@ -14,14 +14,16 @@ const Exchanges = () => {
   const exchangesList = data?.data?.exchanges;
 
   if (isFetching) return <Loader />;
+    if (!exchangesList) return null;
+
 
   return (
     <>
       <Row>
-        <Col span={6}>Exchanges</Col>
-        <Col span={6}>24h Trade Volume</Col>
-        <Col span={6}>Markets</Col>
-        <Col span={6}>Change</Col>
+        <Col span={3}>Rank</Col>
+        <Col span={7}>Exchanges</Col>
+        <Col span={7}>24h Trade Volume</Col>
+        <Col span={7}>Markets</Col>
       </Row>
       <Row>
         {exchangesList.map((exchange) => (
@@ -32,14 +34,13 @@ const Exchanges = () => {
                 showArrow={false}
                 header={(
                   <Row key={exchange.id}>
-                    <Col span={6}>
-                      <Text><strong>{exchange.rank}.</strong></Text>
+                    <Col span={3}>{exchange.rank}</Col>
+                    <Col span={7}>
                       <Avatar className="exchange-image" src={exchange.iconUrl} />
                       <Text><strong>{exchange.name}</strong></Text>
                     </Col>
-                    <Col span={6}>${millify(exchange.volume)}</Col>
-                    <Col span={6}>{millify(exchange.numberOfMarkets)}</Col>
-                    <Col span={6}>{millify(exchange.marketShare)}%</Col>
+                    <Col span={7}>${millify(exchange['24hVolume'])}</Col>
+                    <Col span={7}>{millify(exchange.numberOfMarkets)}</Col>
                   </Row>
                   )}
               >

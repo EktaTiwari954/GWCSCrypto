@@ -36,7 +36,7 @@ const Navbar = () => {
                 </Typography.Title>
             </div>
             <Button className='menu-control-container' onClick={()=> setActiveMenu(!activeMenu)}>
-                <MenuOutlined/>
+                <MenuOutlined />
             </Button>
             { activeMenu && (
             <Menu theme="dark">
@@ -53,7 +53,7 @@ const Navbar = () => {
                     <Link to='/news'>News</Link>
                 </Menu.Item>
             </Menu>
-               )}
+               )}    
         </div>
     )
 }
